@@ -22,7 +22,7 @@ class _QuestionsScreenState extends State<QuestionsScreen> {
   void answerQuestion(String selectedAnswer) {
     widget.onSelectAnswer(selectedAnswer);
     setState(() {
-      currentQuestionNumber++;
+      if (currentQuestionNumber < questions.length - 1) currentQuestionNumber++;
     });
   }
 
